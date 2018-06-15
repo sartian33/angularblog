@@ -1,0 +1,11 @@
+<li ng-class="list-group-item">
+    <div [ngClass]="{'list-group-item-success':loveIts > 0, 'list-group-item-danger':loveIts < 0}">
+      <h2>{{title}}</h2>
+      <p style="color: grey;font-weight: bold">{{created_at | date: 'medium'}}</p>
+      <p>{{content}}</p>
+      <button class="btn btn-success" (click)="onUpvote()">Love it !</button>
+      <button class="btn btn-danger" (click)="onDownvote()">Don't love it !</button>
+      <button class="btn btn-danger btn-right" (click)="onDelete()">Supprimer post</button>
+    </div>
+</li>
+
